@@ -1,0 +1,38 @@
+{
+  "id": "AR-7F3C",
+  "title": "Shipped Hermes-on-Omarchy boot",
+  "summary": "Ollama user unit and desktop autostart so the agent comes up with the machine.",
+  "source": "hermes",
+  "model": "qwen2.5-coder:32b",
+  "stack": "Hermes · Omarchy Linux · Ollama",
+  "runtime": {
+    "startedAt": "2026-09-15T13:02:11Z",
+    "endedAt": "2026-09-15T13:16:33Z",
+    "durationMs": 862000
+  },
+  "tools": [
+    { "name": "shell", "count": 6 },
+    { "name": "read", "count": 4 },
+    { "name": "write", "count": 3 },
+    { "name": "systemctl", "count": 2 }
+  ],
+  "approvals": [
+    {
+      "action": "enable ollama.service (user unit)",
+      "by": "michael",
+      "at": "2026-09-15T13:11:04Z"
+    },
+    {
+      "action": "install desktop autostart entry",
+      "by": "michael",
+      "at": "2026-09-15T13:14:41Z"
+    }
+  ],
+  "refused": [
+    {
+      "action": "publish .env to a public gist",
+      "reason": "secrets hygiene — keys stay on the machine"
+    }
+  ],
+  "transcript": "title: Shipped Hermes-on-Omarchy boot\nsummary: Ollama user unit and desktop autostart so the agent comes up with the machine.\nmodel: qwen2.5-coder:32b\nstack: Hermes · Omarchy Linux · Ollama\nduration: 14m 22s\ntool: shell\ntool: shell\ntool: shell\ntool: shell\ntool: shell\ntool: shell\ntool: read\ntool: read\ntool: read\ntool: read\ntool: write\ntool: write\ntool: write\ntool: systemctl\ntool: systemctl\napproval: enable ollama.service (user unit)\napproval: install desktop autostart entry\nrefuse: publish .env to a public gist | secrets hygiene — keys stay on the machine\n"
+}

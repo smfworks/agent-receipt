@@ -1,0 +1,39 @@
+{
+  "id": "AR-9B04",
+  "title": "Landed the LAR hardening PR",
+  "summary": "Imported the resilience notes that actually landed, added tests, and opened a draft PR against main.",
+  "source": "cursor",
+  "model": "Composer",
+  "stack": "Cursor · LAR · TypeScript",
+  "runtime": {
+    "startedAt": "2026-09-14T18:03:40Z",
+    "endedAt": "2026-09-14T18:26:31Z",
+    "durationMs": 1371000
+  },
+  "tools": [
+    { "name": "Read", "count": 18 },
+    { "name": "Grep", "count": 9 },
+    { "name": "StrReplace", "count": 11 },
+    { "name": "Shell", "count": 7 },
+    { "name": "Write", "count": 3 }
+  ],
+  "approvals": [
+    {
+      "action": "git push origin cursor/lar-hardening",
+      "by": "michael",
+      "at": "2026-09-14T18:24:09Z"
+    },
+    {
+      "action": "open draft pull request to main",
+      "by": "michael",
+      "at": "2026-09-14T18:25:44Z"
+    }
+  ],
+  "refused": [
+    {
+      "action": "force-push to main",
+      "reason": "protected branch — history stays linear"
+    }
+  ],
+  "transcript": "title: Landed the LAR hardening PR\nsummary: Imported the resilience notes that actually landed, added tests, and opened a draft PR against main.\nmodel: Composer\nstack: Cursor · LAR · TypeScript\nduration: 22m 51s\ntool: Read\ntool: Grep\ntool: StrReplace\ntool: Shell\ntool: Write\napproval: git push origin cursor/lar-hardening\napproval: open draft pull request to main\nrefuse: force-push to main | protected branch — history stays linear\n"
+}
