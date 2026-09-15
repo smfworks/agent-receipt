@@ -202,7 +202,7 @@ a:hover {
 
 textarea {
   width: 100%;
-  min-height: 320px;
+  min-height: 240px;
   resize: vertical;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -239,12 +239,10 @@ textarea:focus {
 .stage {
   display: grid;
   gap: 14px;
-  position: sticky;
-  top: 16px;
 }
 
 .stage-scroll {
-  overflow: auto;
+  overflow: visible;
   padding: 4px;
 }
 
@@ -262,7 +260,7 @@ textarea:focus {
     linear-gradient(180deg, rgba(0, 212, 255, 0.05), transparent 18%),
     var(--paper);
   color: var(--ink);
-  padding: 22px 22px 18px;
+  padding: 18px 20px 16px;
   border: 1px solid rgba(0, 212, 255, 0.22);
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.45),
@@ -278,7 +276,7 @@ textarea:focus {
   height: 18px;
   border-radius: 50%;
   background: #0a0f1f;
-  top: 108px;
+  top: 96px;
   box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.16);
 }
 
@@ -317,7 +315,7 @@ textarea:focus {
 .r-top h2 {
   margin: 6px 0 4px;
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 22px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1;
@@ -341,8 +339,8 @@ textarea:focus {
 
 .perforation {
   position: relative;
-  height: 18px;
-  margin: 6px -22px 10px;
+  height: 16px;
+  margin: 4px -20px 8px;
 }
 
 .perforation span {
@@ -354,9 +352,9 @@ textarea:focus {
 }
 
 .r-hero h3 {
-  margin: 4px 0 8px;
+  margin: 4px 0 6px;
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
@@ -377,7 +375,7 @@ textarea:focus {
 
 .r-rule {
   height: 0;
-  margin: 14px 0;
+  margin: 10px 0;
   border-top: 1px dashed rgba(139, 149, 173, 0.35);
 }
 
@@ -470,7 +468,7 @@ textarea:focus {
 .r-amount {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: -0.04em;
   color: var(--ember-soft);
   line-height: 1;
@@ -507,8 +505,8 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 28px;
-  margin: 0 8px 14px;
+  height: 22px;
+  margin: 0 8px 12px;
 }
 
 .barcode i {
@@ -608,8 +606,10 @@ textarea:focus {
 }
 
 .btn:disabled {
-  opacity: 0.45;
   cursor: not-allowed;
+  background: #151c30;
+  color: #6b7388;
+  border-color: rgba(0, 212, 255, 0.08);
 }
 
 .btn-ember {
@@ -618,6 +618,11 @@ textarea:focus {
   border-color: transparent;
   color: #1a0b04;
   font-weight: 600;
+}
+
+.btn-ember:disabled {
+  background: #2a1d16;
+  color: #8a6a58;
 }
 
 .btn-ghost {
@@ -693,6 +698,6 @@ textarea:focus {
   }
 
   textarea {
-    min-height: 220px;
+    min-height: 180px;
   }
 }

@@ -9,10 +9,21 @@ Paste a transcript, pick a sample (Hermes, OpenClaw, or Cursor-style), or load J
 [![MIT License](https://img.shields.io/badge/license-MIT-00D4FF?labelColor=0A0F1F)](LICENSE)
 
 <p align="center">
-  <img src="docs/receipt-placeholder.svg" alt="Agent Receipt card — dark navy ticket with ember runtime and cyan type" width="420" />
+  <img src="docs/receipt.png" alt="Agent Receipt card for a Hermes-on-Omarchy boot session" width="380" />
 </p>
 
-<p align="center"><em>Placeholder — swap in a PNG from Download PNG once you print a live card (<code>docs/receipt.png</code>).</em></p>
+<p align="center">
+  <img src="docs/app-desktop.png" alt="Agent Receipt desktop app with Hermes sample loaded" width="900" />
+</p>
+
+## Screenshots
+
+Receipt card (Hermes sample) and the desktop compositor. Mobile stacks the session panel above the card.
+
+<p align="center">
+  <img src="docs/app-mobile.png" alt="Agent Receipt on a 390px viewport" width="320" />
+</p>
+
 
 ## Why a receipt?
 

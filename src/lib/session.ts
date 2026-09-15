@@ -80,25 +80,32 @@ export function sessionDateLabel(session: AgentSession): string {
   if (!iso) return formatToday();
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return formatToday();
-  return date
-    .toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "2-digit",
-      timeZone: "UTC",
-    })
-    .toUpperCase();
+  return formatReceiptDate(date);
 }
 
 export function formatToday(): string {
-  return new Date()
-    .toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "2-digit",
-      timeZone: "UTC",
-    })
-    .toUpperCase();
+  return formatReceiptDate(new Date());
+}
+
+const MONTHS = [
+  "JAN",
+  "FEB",
+  "MAR",
+  "APR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AUG",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DEC",
+];
+
+export function formatReceiptDate(date: Date): string {
+  const dd = String(date.getUTCDate()).padStart(2, "0");
+  const yy = String(date.getUTCFullYear()).slice(-2);
+  return `${dd} ${MONTHS[date.getUTCMonth()]} ${yy}`;
 }
 
 export function slugify(value: string): string {
