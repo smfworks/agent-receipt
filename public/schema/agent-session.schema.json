@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/smfworks/agent-receipt/blob/main/public/schema/agent-session.schema.json",
+  "title": "AgentSession",
+  "description": "A single agent session that Agent Receipt can print as a shareable card. Other tools can emit this shape.",
+  "type": "object",
+  "required": ["title", "summary"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Optional session id. Printed as the receipt number when present."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short headline of what the agent did."
+    },
+    "summary": {
+      "type": "string",
+      "description": "One or two sentences for the body of the receipt."
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "startedAt": { "type": "string", "format": "date-time" },
+        "endedAt": { "type": "string", "format": "date-time" },
+        "durationMs": { "type": "number", "minimum": 0 },
+        "label": {
+          "type": "string",
+          "description": "Preformatted duration such as 14m 22s. Derived from durationMs when omitted."
+        }
+      }
+    },
+    "model": { "type": "string" },
+    "stack": { "type": "string" },
+    "source": {
+      "type": "string",
+      "enum": ["hermes", "openclaw", "cursor", "json", "paste"]
+    },
+    "tools": {
+      "description": "Tool calls. Either {name,count} objects or a list of tool name strings.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "count": { "type": "integer", "minimum": 1 }
+            }
+          },
+          { "type": "string" }
+        ]
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["action"],
+            "properties": {
+              "action": { "type": "string" },
+              "by": { "type": "string" },
+              "at": { "type": "string" }
+            }
+          },
+          { "type": "string" }
+        ]
+      }
+    },
+    "refused": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["action"],
+            "properties": {
+              "action": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          },
+          { "type": "string" }
+        ]
+      }
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Optional raw log. Ignored by the printer; useful for round-tripping."
+    }
+  }
+}

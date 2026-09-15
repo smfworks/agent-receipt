@@ -1,0 +1,42 @@
+{
+  "id": "AR-2C91",
+  "title": "Triaged overnight inbox on OpenClaw",
+  "summary": "Sorted 23 threads, drafted four replies, and held two sends for human review.",
+  "source": "openclaw",
+  "model": "claude-sonnet",
+  "stack": "OpenClaw gateway · local runtime",
+  "runtime": {
+    "startedAt": "2026-09-15T07:14:02Z",
+    "endedAt": "2026-09-15T07:22:06Z",
+    "durationMs": 484000
+  },
+  "tools": [
+    { "name": "mail.search", "count": 5 },
+    { "name": "mail.read", "count": 12 },
+    { "name": "mail.draft", "count": 4 },
+    { "name": "calendar.lookup", "count": 2 }
+  ],
+  "approvals": [
+    {
+      "action": "send vendor reply (quote follow-up)",
+      "by": "michael",
+      "at": "2026-09-15T07:19:18Z"
+    },
+    {
+      "action": "create Thursday 10:00 follow-up event",
+      "by": "michael",
+      "at": "2026-09-15T07:21:02Z"
+    }
+  ],
+  "refused": [
+    {
+      "action": "send payment authorization",
+      "reason": "consequential act — stays behind review"
+    },
+    {
+      "action": "read a third-party personal mailbox",
+      "reason": "out of scope for this gateway"
+    }
+  ],
+  "transcript": "title: Triaged overnight inbox on OpenClaw\nsummary: Sorted 23 threads, drafted four replies, and held two sends for human review.\nmodel: claude-sonnet\nstack: OpenClaw gateway · local runtime\nduration: 8m 04s\ntool: mail.search\ntool: mail.read\ntool: mail.draft\ntool: calendar.lookup\napproval: send vendor reply (quote follow-up)\napproval: create Thursday 10:00 follow-up event\nrefuse: send payment authorization | consequential act — stays behind review\nrefuse: read a third-party personal mailbox | out of scope for this gateway\n"
+}

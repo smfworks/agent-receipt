@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="560" viewBox="0 0 840 560" role="img" aria-label="Agent Receipt placeholder">
+  <rect width="840" height="560" fill="#0A0F1F"/>
+  <circle cx="120" cy="-40" r="220" fill="#ea580c" opacity="0.16"/>
+  <circle cx="760" cy="80" r="200" fill="#00D4FF" opacity="0.12"/>
+  <rect x="250" y="36" width="340" height="488" rx="6" fill="#0e162c" stroke="#00D4FF" stroke-opacity="0.35"/>
+  <text x="420" y="78" text-anchor="middle" fill="#00D4FF" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">SMF WORKS</text>
+  <text x="420" y="108" text-anchor="middle" fill="#e8edf7" font-family="sans-serif" font-size="26" letter-spacing="3">AGENT RECEIPT</text>
+  <text x="290" y="136" fill="#8b95ad" font-family="ui-monospace, monospace" font-size="11">NO. AR-7F3C</text>
+  <text x="530" y="136" text-anchor="end" fill="#8b95ad" font-family="ui-monospace, monospace" font-size="11">15 SEP 26</text>
+  <line x1="268" y1="152" x2="572" y2="152" stroke="#00D4FF" stroke-opacity="0.28" stroke-dasharray="4 5"/>
+  <text x="290" y="178" fill="#00D4FF" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">WORK COMPLETED</text>
+  <text x="290" y="206" fill="#e8edf7" font-family="sans-serif" font-size="20">Shipped Hermes-on-Omarchy boot</text>
+  <text x="290" y="230" fill="#c5cde0" font-family="sans-serif" font-size="13">Ollama user unit and desktop autostart so the</text>
+  <text x="290" y="248" fill="#c5cde0" font-family="sans-serif" font-size="13">agent comes up with the machine.</text>
+  <line x1="268" y1="266" x2="572" y2="266" stroke="#8b95ad" stroke-opacity="0.35" stroke-dasharray="4 5"/>
+  <text x="290" y="292" fill="#fb923c" font-family="ui-monospace, monospace" font-size="13">6  ·  shell</text>
+  <text x="290" y="314" fill="#fb923c" font-family="ui-monospace, monospace" font-size="13">4  ·  read</text>
+  <text x="290" y="336" fill="#4ade80" font-family="sans-serif" font-size="13"> enable ollama.service</text>
+  <text x="290" y="358" fill="#fb923c" font-family="sans-serif" font-size="13"> publish .env to a public gist</text>
+  <text x="420" y="404" text-anchor="middle" fill="#00D4FF" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">RUNTIME</text>
+  <text x="420" y="444" text-anchor="middle" fill="#fb923c" font-family="sans-serif" font-size="42">14m 22s</text>
+  <text x="420" y="488" text-anchor="middle" fill="#8b95ad" font-family="sans-serif" font-size="12">Agent Receipt · SMF Works</text>
+  <text x="420" y="508" text-anchor="middle" fill="#00D4FF" font-family="ui-monospace, monospace" font-size="11">smfworks.com</text>
+</svg>

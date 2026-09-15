@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Agent Receipt">
+  <rect width="32" height="32" rx="7" fill="#0A0F1F"/>
+  <rect x="8" y="5.5" width="16" height="21" rx="1.6" fill="#121a33" stroke="#00D4FF" stroke-width="1.15"/>
+  <path d="M8 9.2h16M8 22.8h16" stroke="#00D4FF" stroke-opacity="0.45" stroke-width="0.7" stroke-dasharray="1.4 1.2"/>
+  <path d="M11 13h10M11 16.4h10M11 19.8h6.5" stroke="#ea580c" stroke-width="1.35" stroke-linecap="round"/>
+</svg>
