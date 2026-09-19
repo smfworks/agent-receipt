@@ -4,7 +4,7 @@ import {
   normalizeSession,
   parseDurationLabel,
   splitReason,
-} from "./session";
+} from "./session.ts";
 
 const TOOL_LINE =
   /^(?:tool|called|invoked|using|used|ran)s?\s*(?:the\s+)?(?:tool|function|command|skill)?\s*[:\-]\s*[`"'"]?([a-zA-Z][\w./:-]*)/i;
