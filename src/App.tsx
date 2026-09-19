@@ -11,6 +11,7 @@ import type { AgentSession } from "./types";
 import { Actions } from "./components/Actions";
 import { Composer } from "./components/Composer";
 import { Header } from "./components/Header";
+import { SisterStrip } from "./components/SisterStrip";
 import { Receipt } from "./components/Receipt";
 import { Toast } from "./components/Toast";
 import { formatCompactStats, formatShareText } from "./lib/share";
@@ -174,6 +175,7 @@ export default function App() {
     <div className="page">
       <div className="ambient" aria-hidden="true" />
       <Header />
+      <SisterStrip current="agent-receipt" />
       <main className="layout">
         <Composer
           raw={raw}
