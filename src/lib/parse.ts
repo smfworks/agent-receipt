@@ -31,27 +31,26 @@ export function parseSessionInput(raw: string): AgentSession | null {
   const text = raw.trim();
   if (!text) return null;
 
-  const json = tryParseJson(text);
-  if (json) return normalizeSession(json, json.source ? undefined : "json");
+  if (text.startsWith("{") || text.startsWith("[")) {
+    try {
+      const parsed: unknown = JSON.parse(text);
+      if (Array.isArray(parsed) && parsed.length === 1 && isSessionLike(parsed[0])) {
+        return normalizeSession(parsed[0] as Record<string, unknown>, "json");
+      }
+      if (isSessionLike(parsed)) {
+        const record = parsed as Record<string, unknown>;
+        return normalizeSession(record, record.source ? undefined : "json");
+      }
+      return null;
+    } catch {
+      /* fall through to labeled / heuristic */
+    }
+  }
 
   const labeled = parseLabeled(text);
   if (labeled) return labeled;
 
   return parseHeuristic(text);
-}
-
-function tryParseJson(text: string): Record<string, unknown> | null {
-  if (!(text.startsWith("{") || text.startsWith("["))) return null;
-  try {
-    const parsed: unknown = JSON.parse(text);
-    if (Array.isArray(parsed) && parsed.length === 1 && isSessionLike(parsed[0])) {
-      return parsed[0] as Record<string, unknown>;
-    }
-    if (isSessionLike(parsed)) return parsed;
-  } catch {
-    return null;
-  }
-  return null;
 }
 
 function parseLabeled(text: string): AgentSession | null {

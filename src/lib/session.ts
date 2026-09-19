@@ -291,7 +291,7 @@ export function isSessionLike(value: unknown): value is Record<string, unknown> 
   const record = value as Record<string, unknown>;
   return (
     typeof record.title === "string" ||
-    Array.isArray(record.tools) ||
-    typeof record.summary === "string"
+    typeof record.summary === "string" ||
+    (Array.isArray(record.tools) && record.tools.length > 0)
   );
 }

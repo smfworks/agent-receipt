@@ -774,3 +774,9 @@ textarea:focus {
     min-height: 180px;
   }
 }
+
+
+.handoff-error {
+  color: var(--ember-soft);
+  font-size: 12px;
+}
