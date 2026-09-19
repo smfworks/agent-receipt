@@ -45,12 +45,31 @@ duration: 8m 4s
 });
 
 describe("isSessionLike", () => {
-  it("accepts title, tools, or summary", () => {
+  it("accepts title, summary, or a non-empty tools list", () => {
     assert.equal(isSessionLike({ title: "Run" }), true);
-    assert.equal(isSessionLike({ tools: [] }), true);
     assert.equal(isSessionLike({ summary: "Did a thing" }), true);
+    assert.equal(isSessionLike({ tools: [{ name: "gh" }] }), true);
+    assert.equal(isSessionLike({ tools: [] }), false);
     assert.equal(isSessionLike({ foo: 1 }), false);
     assert.equal(isSessionLike(null), false);
+  });
+});
+
+describe("heuristic paste", () => {
+  it("splits an unlabeled chat log into tools and a title", () => {
+    const session = parseSessionInput(`
+User: Fix the failing CI on main
+Assistant: I'll inspect the check, then patch.
+tool: gh
+Done: PR opened. Tests green.
+`);
+    assert.ok(session);
+    assert.ok(session.tools.some((tool) => /gh/i.test(tool.name)));
+    assert.match(session.title, /fix the failing CI/i);
+  });
+
+  it("does not treat {\"tools\":[]} as a session", () => {
+    assert.equal(parseSessionInput('{"tools":[]}'), null);
   });
 });
 
